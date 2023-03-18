@@ -1,5 +1,6 @@
 body{
   text-align: center;
+  background-color: black;
 }
 
 .game {
@@ -30,12 +31,14 @@ body{
   margin-top: 8px;
   border-radius: 20px;
   visibility: hidden;
+  user-select: none;
+  cursor:auto
 }
 
 .game_score {
   width: 50px;
   height: 50px;
-  font-size: 46px;
+  font-size: 38px;
   background-color: darksalmon;
   text-align: center;
   border-radius: 50%;
@@ -43,6 +46,8 @@ body{
   margin-top: 8px;
   border: 3px solid black;
   visibility: hidden;
+  user-select: none;
+  cursor: auto;
 }
 
 .game_button:hover {
@@ -101,4 +106,13 @@ button {
 .pop-up_message{
   display: block;
   font-size: 38px;
+}
+
+.carrot:hover,
+.bug:hover{
+  transform:scale(1.1);
+}
+
+.carrot, .bug{
+  transition: transform 100ms ease-in;
 }
