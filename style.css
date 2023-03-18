@@ -1,0 +1,63 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  background: url(img/background.png) center/cover;
+  width: 800px;
+  height: 500px;
+}
+
+.game_button {
+  width: 60px;
+  height: 60px;
+  background-color: wheat;
+  border: 4px solid black;
+  font-size: 24px;
+  transition: transform 300ms ease-in;
+}
+
+.game_timer {
+  width: 100px;
+  background-color: white;
+  text-align: center;
+  border: 5px solid black;
+  font-size: 32px;
+  margin-top: 8px;
+  border-radius: 20px;
+}
+
+.game_score {
+  width: 50px;
+  height: 50px;
+  font-size: 46px;
+  background-color: darksalmon;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  margin-top: 8px;
+  border: 3px solid black;
+}
+
+.game_button:hover {
+  transform: scale(1.1);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.game_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.game_field {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  margin-top:40px;
+  opacity: 0.4;
+}
