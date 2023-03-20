@@ -7,7 +7,7 @@ this.popUpText = document.querySelector(".pop-up_message");
 this.popUpRefresh = document.querySelector(".pop-up_refresh");
 this.popUpRefresh.addEventListener('click',()=>{
   this.onClick && this.onClick();
-  hide()
+  this.hide()
 })
 }
 
