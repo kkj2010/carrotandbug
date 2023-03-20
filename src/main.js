@@ -10,9 +10,7 @@ const fieldRect = field.getBoundingClientRect();
 const gameBtn = document.querySelector(".game_button");
 const gameTimer = document.querySelector(".game_timer");
 const gameScore = document.querySelector(".game_score");
-const popUp = document.querySelector(".pop-up");
-const popUpText = document.querySelector(".pop-up_message");
-const popUpRefresh = document.querySelector(".pop-up_refresh");
+
 const carrotSound= new Audio('/sound/carrot_pull.mp3')
 const alertSound= new Audio('/sound/alert.wav')
 const bgSound= new Audio('/sound/bg.mp3')
@@ -36,7 +34,6 @@ gameBtn.addEventListener("click", () => {
 
 popUpRefresh.addEventListener('click',()=>{
   startGame();
-  hidePopUp();
 })
 
 function startGame() {
@@ -117,10 +114,6 @@ function showPopUpWithText(text) {
   popUp.classList.remove("pop-up--hide");
 }
 
-
-function hidePopUp(){
- popUp.classList.add('pop-up--hide')
-}
 
 
 
