@@ -1,28 +1,23 @@
 import * as sound from "./sound.js";
-import Field from "./field.js";
+import {Field, ItemType } from "./field.js";
 
 export default class GameBuilder {
-  gameDuration(duration){
-    this.gameDuration= duration;
+  gameDuration(duration) {
+    this.gameDuration = duration;
     return this;
   }
-  carrotcount(num){
-    this.carrotcount= num;
+  carrotcount(num) {
+    this.carrotcount = num;
     return this;
   }
-  bugCount(num){
-    this.bugCount= num;
-    return this
+  bugCount(num) {
+    this.bugCount = num;
+    return this;
   }
-  build(){
-    return new Game(
-      this.gameDuration,
-      this.carrotcount,
-      this.bugCount
-    )
+  build() {
+    return new Game(this.gameDuration, this.carrotcount, this.bugCount);
   }
 }
-
 
 class Game {
   constructor(gameDuration, carrotCount, bugCount) {
@@ -89,13 +84,13 @@ class Game {
     if (!this.started) {
       return;
     }
-    if (item === "carrot") {
+    if (item === ItemType.carrot) {
       this.score++;
       this.updateScoreBoard();
       if (this.score === this.carrotCount) {
         this.finish(true);
       }
-    } else if (item === "bug") {
+    } else if (item === ItemType.bug) {
       this.finish(false);
     }
   };
