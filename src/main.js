@@ -1,4 +1,5 @@
 "use strict";
+import PopUp from './popup.js'
 
 const CARROT_SIZE = 80;
 const CARROT_COUNT = 15;
@@ -22,6 +23,12 @@ let started = false;
 let score = 0;
 let timer = undefined;
 
+
+const gameFinishbanner= new PopUp()
+gameFinishbanner.setClickListner(()=>{
+  startGame(); 
+})
+
 field.addEventListener("click", onFieldClick);
 
 gameBtn.addEventListener("click", () => {
@@ -32,9 +39,6 @@ gameBtn.addEventListener("click", () => {
   }
 });
 
-popUpRefresh.addEventListener('click',()=>{
-  startGame();
-})
 
 function startGame() {
   started=true
@@ -49,7 +53,7 @@ function stopGame() {
   started=false
   stopGameTimer();
   hideGameButton();
-  showPopUpWithText("REPLAY?");
+gameFinishbanner.showWithText('REPLAY?')
   playSound(alertSound)
   stopSound(bgSound)
 }
@@ -64,7 +68,7 @@ function finishGame(win){
    }
    stopGameTimer()
    stopSound(bgSound)
-   showPopUpWithText(win? 'YOU WON': 'YOU LOST')
+  gameFinishbanner.showWithText(win? 'YOU WON': 'YOU LOST')
 
  
  }
@@ -108,14 +112,6 @@ function updateTimerText(timer) {
   const seconds = timer % 60;
   gameTimer.innerText = `${minutes}: ${seconds}`;
 }
-
-function showPopUpWithText(text) {
-  popUpText.innerText = text;
-  popUp.classList.remove("pop-up--hide");
-}
-
-
-
 
 function initGame() {
   score=0
