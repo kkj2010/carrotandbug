@@ -13,6 +13,7 @@ Play [here](https://kkj2010.github.io/carrotandbug/)!
 ## FUNCTIONALITIES AND MVPS 
 In CARROT AND BUG GAME, the user will be able to:
 * Start and restart the game.
+* When the game starts, game background music plays, and special sound effects come out when carrots and bugs are clicked.
 * Collect carrots by clicking on them within given time
 
 
