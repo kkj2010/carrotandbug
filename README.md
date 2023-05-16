@@ -2,7 +2,7 @@
 # CARROT AND BUG GAME
 
 ## DESCRIPTION
-In this game, when you press the start button, worms and carrots spread out on the game field. 
+In this game, when you press the start button, worms and carrots will spread out on the game field. 
 Carrots must be collected within the given time. 
 The worm loses the game if clicked on or if the game is not finished within the allotted time.
 
